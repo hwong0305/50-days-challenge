@@ -1,0 +1,15 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "dependencies": {
+    "@snowpack/plugin-sass": "^1.4.0"
+  },
+  "devDependencies": {
+    "snowpack": "^3.3.1"
+  }
+}
