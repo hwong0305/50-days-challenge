@@ -35,7 +35,7 @@ body {
       width: 30px;
       height: 30px;
       text-align: center;
-      border: solid 2px #ddd;
+      border: solid 2px rgb(224, 224, 224);
       border-radius: 60px;
       transition: all 0.7s ease-in-out;
     }
@@ -54,10 +54,14 @@ body {
     .third.barrier,
     .fourth.barrier {
       height: 4px;
-      width: 50px;
-      background: linear-gradient(to right, #3498db 50%, #ddd 50%);
-      background-size: 200% 200%;
-      background-position-x: 100%;
+      width: 100px;
+      background: linear-gradient(
+        to right,
+        #3498db 50%,
+        rgb(224, 224, 224) 50%
+      );
+      background-size: 400% 400%;
+      background-position-x: 400%;
       transform: translateY(13px);
       transition: all 0.7s ease-in-out;
     }
