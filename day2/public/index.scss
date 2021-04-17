@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+  background: #f6f7fb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .progress {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    div {
+      display: inline-block;
+      font-size: 24px;
+    }
+
+    .first,
+    .second,
+    .third,
+    .fourth {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      border: solid 2px #ddd;
+      border-radius: 60px;
+      transition: all 0.7s ease-in-out;
+    }
+
+    .first {
+      border: solid 2px #3498db;
+    }
+
+    .second.triggered,
+    .third.triggered,
+    .fourth.triggered {
+      border: solid 2px #3498db;
+    }
+
+    .second.barrier,
+    .third.barrier,
+    .fourth.barrier {
+      height: 4px;
+      width: 50px;
+      background: linear-gradient(to right, #3498db 50%, #ddd 50%);
+      background-size: 200% 200%;
+      background-position-x: 100%;
+      transform: translateY(13px);
+      transition: all 0.7s ease-in-out;
+    }
+
+    .second.barrier.triggered,
+    .third.barrier.triggered,
+    .fourth.barrier.triggered {
+      background-position-x: 0;
+    }
+  }
+
+  .controls {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+button {
+  font-size: 18px;
+  width: 120px;
+  margin: 1rem;
+  padding: 0.5rem;
+  background: #3498db;
+  color: white;
+  border-radius: 0.4rem;
+  border: none;
+  transition: background-color 0.7s;
+}
+
+button:disabled {
+  color: black;
+  background: #e0e0e0;
+}
