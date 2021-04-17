@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+}
+
+h1::after {
+  content: '%';
+  display: inline-block;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./photo-1576161787924-01bb08dad4a4.webp');
+  background-size: cover;
+  filter: blur(10px);
+  position: fixed;
+  z-index: -1;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/index.css" />
+    <title>Day 5 Blurry Photos</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <h1>0</h1>
+    <script>
+      const container = document.querySelector('.container');
+      const percentage = document.querySelector('h1');
+      let timeout;
+
+      timeout = setInterval(() => {
+        if (percentage.innerText === '100') {
+          percentage.style.display = 'none';
+          clearInterval(timeout);
+          return;
+        }
+
+        percentage.innerText = Number(percentage.innerText) + 1;
+
+        container.style.filter = `blur(${Number(
+          10 - percentage.innerText / 10
+        )}px)`;
+      }, 50);
+    </script>
+  </body>
+</html>
