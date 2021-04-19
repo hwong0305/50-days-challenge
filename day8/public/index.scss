@@ -20,7 +20,12 @@ body {
   text-align: center;
   color: #ddd;
   font-family: 'Noto Sans JP', sans-serif;
-  padding: 1rem;
+  padding: 20px 40px;
+
+  h1 {
+    display: block;
+    margin-bottom: 30px;
+  }
 
   .form-email,
   .form-password {
@@ -30,7 +35,8 @@ body {
   label {
     position: absolute;
     left: 0;
-    top: -5px;
+    top: -10px;
+    transition: all 0.35s;
   }
 
   input {
@@ -46,5 +52,26 @@ body {
 
   input:focus {
     border-bottom: solid 1px steelblue;
+  }
+
+  input:focus + label,
+  input:valid + label {
+    transform: translateY(-20px);
+    font-size: 12px;
+  }
+
+  button {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 15px;
+    background: #aad8e6;
+    border: none;
+    border-radius: 0.2rem;
+  }
+
+  a {
+    color: #a1decb;
+    text-decoration: none;
+    margin-top: 30px;
   }
 }
