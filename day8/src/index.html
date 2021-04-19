@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/index.css" />
+    <title>Animated Form</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form>
+        <h1>Please Login</h1>
+        <!-- Not using fieldset because fieldset has inherent styling for groups -->
+        <div class="form-email">
+          <label for="email">Email</label>
+          <input type="text" id="email" />
+        </div>
+        <div class="form-password">
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+        </div>
+        <button>Login</button>
+        <p>Don't have an account? <a href="#">Register</a></p>
+      </form>
+    </div>
+  </body>
+</html>

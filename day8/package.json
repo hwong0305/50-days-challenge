@@ -1,0 +1,15 @@
+{
+  "name": "snowpack-boiler-plate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "devDependencies": {
+    "snowpack": "^3.2.2"
+  },
+  "dependencies": {
+    "@snowpack/plugin-sass": "^1.4.0"
+  }
+}
