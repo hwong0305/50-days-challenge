@@ -1,9 +1,10 @@
 module.exports = {
+  plugins: ['@snowpack/plugin-sass'],
   mount: {
     src: '/',
-    public: '/'
+    public: '/',
   },
   devOptions: {
-    open: 'none'
-  }
-}
+    open: 'none',
+  },
+};

@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "snowpack": "^3.2.2"
+  },
+  "dependencies": {
+    "@snowpack/plugin-sass": "^1.4.0"
   }
 }
