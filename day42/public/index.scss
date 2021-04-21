@@ -1,0 +1,22 @@
+html {
+  --primary-color: #3e57db;
+  --dark-primary: #2b3d99;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  background: #f8f9fd;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
