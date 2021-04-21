@@ -2,6 +2,7 @@ html {
   --primary-color: #3e57db;
   --dark-primary: #2b3d99;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -19,4 +20,46 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.card {
+  width: 400px;
+  text-align: center;
+  height: 80%;
+  overflow: hidden;
+}
+
+.card-header {
+  background: var(--primary-color);
+  color: white;
+  height: 30%;
+  padding-top: 5px;
+
+  input {
+    background: var(--dark-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+  }
+}
+
+.card-body {
+  height: 70%;
+  overflow-y: scroll;
+  text-align: left;
+
+  div {
+    border-bottom: solid 1px black;
+    padding: 10px 10px 10px 80px;
+
+    h1 {
+      margin: 0;
+      font-size: 16px;
+    }
+    p {
+      margin: 10px 0 10px 0;
+      font-size: 12px;
+    }
+  }
 }
