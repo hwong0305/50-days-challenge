@@ -1,4 +1,5 @@
 import Fuse from 'fuse.js';
+import _ from 'underscore';
 const cardBody = document.querySelector('.card-body');
 const search = document.getElementById('search');
 
@@ -25,9 +26,7 @@ const options = {
   keys: ['name.first', 'name.last'],
 };
 
-search.addEventListener('keydown', e => {
-  console.log('changing');
-  cardBody.innerHTML = '';
+const debouncedSearch = _.debounce(e => {
   if (!e.target.value) {
     people.forEach(result => {
       const div = document.createElement('div');
@@ -37,6 +36,7 @@ search.addEventListener('keydown', e => {
       cardBody.appendChild(div);
     });
   } else {
+    cardBody.innerHTML = '';
     const results = fuse.search(e.target.value);
 
     results.forEach(({ item: result }) => {
@@ -47,4 +47,6 @@ search.addEventListener('keydown', e => {
       cardBody.appendChild(div);
     });
   }
-});
+}, 400);
+
+search.addEventListener('keydown', debouncedSearch);

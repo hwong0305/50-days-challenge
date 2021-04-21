@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@snowpack/plugin-sass": "^1.4.0",
-    "fuse.js": "^6.4.6"
+    "fuse.js": "^6.4.6",
+    "underscore": "^1.13.1"
   }
 }
